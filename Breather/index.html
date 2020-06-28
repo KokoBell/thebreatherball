@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+
+<div>
+	<div class="space">
+	</div>
+
+	<div class="ring follow">
+	</div>
+
+	<div class="circle movement">
+	</div>
+</div>
+
+<style>
+
+body {
+	background-image: url("bg.jpg");
+}
+
+div {
+	display: grid;
+	grid-template-rows: 100px 500px 200px;
+	grid-template-columns: 30% 40% 30%;
+	justify-self: center;
+	align-self: center;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    grid-row-start: 2;
+  	grid-row-end: 3;
+  	grid-column-start: 2;
+  	grid-column-end: 3;
+  }
+
+.ring {
+  	height: 250px;
+  	width: 250px;
+  	border-radius: 50%;
+  	border-style: solid;
+  	border-width: 0.4px;
+  	background: transparent;
+  	grid-row-start: 2;
+  	grid-row-end: 3;
+  	grid-column-start: 2;
+  	grid-column-end: 3; 
+  }
+
+.movement {
+  	/*background: linear-gradient(#642B73,#C6426E);*/
+  	/*background: linear-gradient(45deg,#3A1C71,#D76D77,#FFAF7B);*/
+  	background: linear-gradient(45deg,#8e44ad,#c0392b);
+  	animation-name: breathing;
+  	animation-delay: 0s;
+  	animation-duration: 6s;
+  	animation-iteration-count: infinite;
+  }
+
+  .follow {
+ 	background: transparent;
+  	animation-name: follow;
+  	animation-delay: 0s;
+  	animation-duration: 6s;
+  	animation-iteration-count: infinite;
+  }
+
+  @keyframes breathing {
+  	0% {
+  		height: 200px;
+  		width: 200px;
+  	}
+
+  	50% {
+  		height: 350px;
+    	width: 350px;
+  	}
+
+  	100% {
+  		height: 200px;
+  		width: 200px;
+  	}
+  }
+
+  @keyframes follow {
+  	0% {
+  		height: 250px;
+  		width: 250px;
+  	}
+
+  	50% {
+  		height: 400px;
+    	width: 400px;
+  	}
+
+  	100% {
+  		height: 250px;
+  		width: 250px;
+  	}
+  }
+
+  /*
+
+  body {
+  background: linear-gradient(-45deg,#FFAFBD,#ffc3a0); 
+  background: linear-gradient(-45deg,#f4c4f3,#fc67fa);
+}
+
+div {
+	display: grid;
+	grid-template-rows: 100px 500px 200px;
+	grid-template-columns: 30% 40% 30%;
+	justify-self: center;
+	align-self: center;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    grid-row-start: 2;
+  	grid-row-end: 3;
+  	grid-column-start: 2;
+  	grid-column-end: 3;
+  }
+
+.ring {
+  	height: 250px;
+  	width: 250px;
+  	border-radius: 50%;
+  	border-style: solid;
+  	border-width: 0.4px;
+  	background: transparent;
+  	grid-row-start: 2;
+  	grid-row-end: 3;
+  	grid-column-start: 2;
+  	grid-column-end: 3; 
+  }
+
+.movement {
+  	background: linear-gradient(#642B73,#C6426E);
+  	background: linear-gradient(45deg,#3A1C71,#D76D77,#FFAF7B);
+  	background: linear-gradient(45deg,#8e44ad,#c0392b);
+  	animation-name: breathing;
+  	animation-delay: 0s;
+  	animation-duration: 6s;
+  	animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  }
+
+  .follow {
+ 	background: transparent;
+  	animation-name: follow;
+  	animation-delay: 0s;
+  	animation-duration: 6s;
+  	animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.5, 0.25, 0.75, 0.5);
+  }
+
+  
+  @keyframes breathing {
+  	0% {
+  		height: 200px;
+  		width: 200px;
+  	}
+
+  	50% {
+  		height: 350px;
+    	width: 350px;
+  	}
+
+  	100% {
+  		height: 200px;
+  		width: 200px;
+  	}
+  }
+
+  @keyframes follow {
+  	0% {
+  		height: 250px;
+  		width: 250px;
+  	}
+
+  	50% {
+  		height: 400px;
+    	width: 400px;
+  	}
+
+  	100% {
+  		height: 250px;
+  		width: 250px;
+  	}
+  }
+
+  */
